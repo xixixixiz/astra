@@ -49,9 +49,6 @@ if ( ! class_exists( 'Astra_Theme_Background_Updater' ) ) {
 				'astra_responsive_base_background_option',
 				'astra_update_theme_tablet_breakpoint',
 			),
-			'2.4.4' => array(
-				'astra_gtn_full_wide_image_group_css',
-			),
 		);
 
 		/**

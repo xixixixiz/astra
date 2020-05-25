@@ -93,7 +93,6 @@
 			var settingsLinkText = astra.recommendedPluiginSettingsText;
 			var deactivateText = astra.recommendedPluiginDeactivateText;
 			var astraSitesLink = astra.astraSitesLink;
-			var astraPluginRecommendedNonce = astra.astraPluginManagerNonce;
 
 			$message.removeClass( 'install-now installed button-disabled updated-message' )
 				.addClass('updating-message')
@@ -107,7 +106,6 @@
 					type: 'POST',
 					data: {
 						'action'            : 'astra-sites-plugin-activate',
-						'nonce'             : astraPluginRecommendedNonce,
 						'init'              : $init,
 					},
 				})
@@ -156,8 +154,8 @@
 			var $init = $message.data('init');
 			var deactivatingText = $message.data('deactivating-text') || astra.recommendedPluiginDeactivatingText;
 			var settingsLink = $message.data('settings-link');
+			var settingsLinkText = astra.recommendedPluiginSettingsText;
 			var activateText = astra.recommendedPluiginActivateText;
-			var astraPluginRecommendedNonce = astra.astraPluginManagerNonce;
 
 			$message.removeClass( 'install-now installed button-disabled updated-message' )
 				.addClass('updating-message')
@@ -171,7 +169,6 @@
 					type: 'POST',
 					data: {
 						'action'            : 'astra-sites-plugin-deactivate',
-						'nonce'             : astraPluginRecommendedNonce,
 						'init'              : $init,
 					},
 				})

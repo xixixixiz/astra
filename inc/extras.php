@@ -1838,17 +1838,17 @@ function astra_attr( $context, $attributes = array(), $args = array() ) {
 }
 
 /**
- * Ninja Forms compatibility id.
+ * Return affiliate id.
  *
  * @since 1.6.9
  *
- * @return int Compatibility id.
+ * @return int affiliate id.
  */
-function astra_filter_ninja_forms_comp_id() {
+function astra_filter_ninja_forms_affiliate_id() {
 	return 1115254;
 };
 
-add_filter( 'ninja_forms_affiliate_id', 'astra_filter_ninja_forms_comp_id' );
+add_filter( 'ninja_forms_affiliate_id', 'astra_filter_ninja_forms_affiliate_id' );
 
 /**
  * Change upgrade link for wpforms.
@@ -1876,7 +1876,7 @@ add_filter( 'socialsnap_upgrade_link', 'astra_filter_socialsnap_upgrade_link' );
 /**
  * Update GiveWP's "Add-ons" link.
  *
- * Compatibility to change the link according to their needs.
+ * This allows affiliates to change the link according to their needs.
  */
 function astra_givewp_upgrade_link() {
 	return 'https://givewp.com/ref/412';
@@ -1933,22 +1933,8 @@ add_filter( 'astra_customizer_configurations', 'remove_controls', 99 );
  * @return array $default_stats Default stats with Theme specific stats array.
  */
 function astra_add_theme_specific_stats( $default_stats ) {
-	$default_stats['astra_theme_version']       = ASTRA_THEME_VERSION;
-	$default_stats['astra_breadcrumb-position'] = astra_get_option( 'breadcrumb-position', false );
-	$default_stats['astra_mobile-menu-style']   = astra_get_option( 'mobile-menu-style', false );
+	$default_stats['astra_theme_version'] = ASTRA_THEME_VERSION;
 	return $default_stats;
 }
 
 add_filter( 'bsf_core_stats', 'astra_add_theme_specific_stats' );
-
-/**
- * HubSpot Plugin compatibility.
- *
- * @since 2.4.4
- * @return string Compatibility string.
- */
-function astra_get_hubspot_comp_code() {
-	return 'WsZfC';
-}
-
-add_filter( 'leadin_affiliate_code', 'astra_get_hubspot_comp_code' );

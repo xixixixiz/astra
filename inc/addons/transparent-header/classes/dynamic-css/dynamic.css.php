@@ -424,9 +424,8 @@ function astra_ext_transparent_header_dynamic_css( $dynamic_css, $dynamic_css_fi
 	if ( 'both' === $transparent_header_devices ) {
 		$css .= astra_parse_css(
 			array(
-				'.ast-theme-transparent-header .main-header-bar, .ast-theme-transparent-header.ast-header-break-point .main-header-bar' => array(
+				'.ast-theme-transparent-header .main-header-bar, .ast-theme-transparent-header .site-header' => array(
 					'border-bottom-width' => astra_get_css_value( $transparent_header_separator, 'px' ),
-					'border-bottom-style' => 'solid',
 					'border-bottom-color' => esc_attr( $transparent_header_separator_color ),
 				),
 			)
@@ -436,9 +435,8 @@ function astra_ext_transparent_header_dynamic_css( $dynamic_css, $dynamic_css_fi
 	if ( 'mobile' === $transparent_header_devices ) {
 		$css .= astra_parse_css(
 			array(
-				'.ast-theme-transparent-header.ast-header-break-point .main-header-bar' => array(
+				'.ast-theme-transparent-header .site-header' => array(
 					'border-bottom-width' => astra_get_css_value( $transparent_header_separator, 'px' ),
-					'border-bottom-style' => 'solid',
 					'border-bottom-color' => esc_attr( $transparent_header_separator_color ),
 				),
 			),
@@ -452,7 +450,6 @@ function astra_ext_transparent_header_dynamic_css( $dynamic_css, $dynamic_css_fi
 			array(
 				'.ast-theme-transparent-header .main-header-bar' => array(
 					'border-bottom-width' => astra_get_css_value( $transparent_header_separator, 'px' ),
-					'border-bottom-style' => 'solid',
 					'border-bottom-color' => esc_attr( $transparent_header_separator_color ),
 				),
 			),
