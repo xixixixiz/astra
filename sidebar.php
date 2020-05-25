@@ -7,6 +7,9 @@
  * @package Astra
  * @since 1.0.0
  */
+ 
+/**abcd
+*/
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
